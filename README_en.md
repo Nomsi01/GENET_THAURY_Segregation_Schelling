@@ -1,8 +1,8 @@
 # **Modeling spatial segregation using the Schelling model**
 
------------ Vous trouverz la version française dans README_fr.md -----------
+----------- Vous trouverez la version française dans ´README_fr.md´ -----------
 
-ENSAE ParisTech 2022-2023
+ENSAE ParisTech Spring 2022
 
 Simon GENET • Marie-Olive THAURY
 
@@ -41,14 +41,14 @@ The aim of this part is to simulate the phenomenon of social segregation by simu
 
 We simulate the segregation phenomenon described by Schelling using the following parameters
 - the matrix of the initial city
-- the tolerance threshold $\mu$. The higher the threshold, the more tolerant the inhabitants are of their neighbors' groups. For example, if $\mu = 0.6$ then households do not accept to have more than $60\%$ of neighbors from a different group. 
+- the tolerance threshold $\mu$. The higher the threshold, the more tolerant the inhabitants are of their neighbors' groups. For example, if $\mu = 0.6$ then households do not accept to have more than 60% of neighbors from a different group. 
 - the number of years over which the simulation runs. 
 
 Each week, a household is randomly drawn. This household evaluates whether it is satisfied or not with its current housing. Its satisfaction depends on the number of neighbors ${D}_{i}$ who do not belong to the same group as it. 
 
-If the ratio ${D}_{i}}{{D}_{i} + {S}_{i}}$ (where ${S}_{i}$ is the number of neighbors who belong to the same group as him) does not exceed the tolerance threshold ${S}_{i}$, the household is satisfied, he decides to stay in his current housing. 
+If the ratio $\frac{{D}_{i}}{{D}_{i} + {S}_{i}}$ (where ${S}_{i}$ is the number of neighbors who belong to the same group as him) does not exceed the tolerance threshold ${S}_{i}$, the household is satisfied, he decides to stay in his current housing. 
 
-If the ratio ${frac{{D}_{i}}{{D}_{i}} + {S}_{i}}$ strictly exceeds the tolerance threshold ${mu$, the household is not satisfied. A vacant dwelling is then randomly drawn and the household performs the same evaluation as before for the vacant dwelling. If the household will be satisfied in the vacant unit, it moves to that unit. If not, they stay in their current dwelling. Thus, unlike the original Schelling model, dissatisfied households only move if they find a satisfactory vacant unit. 
+If the ratio $\frac{{D}_{i}}{{D}_{i} + {S}_{i}}$ strictly exceeds the tolerance threshold ${mu}$, the household is not satisfied. A vacant dwelling is then randomly drawn and the household performs the same evaluation as before for the vacant dwelling. If the household will be satisfied in the vacant unit, it moves to that unit. If not, they stay in their current dwelling. Thus, unlike the original Schelling model, dissatisfied households only move if they find a satisfactory vacant unit. 
 
 At the end of the year, the number of moves is counted. 
 
@@ -105,7 +105,7 @@ We then test the stability of our model for different tolerance thresholds $\mu$
 
 For each tolerance level $\mu$ , we note that the standard deviation of the number of moves is not too high relative to the number of possible moves. We therefore conclude that the model is relatively stable. 
 
-We observe that the standard deviation of the number of moves is larger for values of $\mu \in \left\{0.6, 0.7\right\}$, which can be explained by the fact that there are more moves and thus a greater dependence on the randomness of our model. 
+We observe that the standard deviation of the number of moves is larger for values of $\mu \in [0.6, 0.7]$, which can be explained by the fact that there are more moves and thus a greater dependence on the randomness of our model. 
 
 To be sure of the validity of our values, we will therefore average over $10$ cities to avoid extreme situations. 
 
@@ -113,9 +113,9 @@ To be sure of the validity of our values, we will therefore average over $10$ ci
 
 Here we are looking for the number of years over which to run the simulation. 
 
-According to the tables presented above and after several repetitions, we noticed that the stationary state can sometimes be reached after the ${900}^{th}$ year. It would therefore be necessary to simulate the phenomenon of social segregation for at least $1000$ years to be sure to take into account all the moves. 
+According to the tables presented above and after several repetitions, we noticed that the stationary state can sometimes be reached after the ${900}^{th}$ year. It would therefore be necessary to simulate the phenomenon of social segregation for at least 1000 years to be sure to take into account all the moves. 
 
-However, we can see from the graphs below (number of moves as a function of the year for several $\mu$) that the first $100$ years are already indicative of a high level of segregation or not. Indeed, the number of moves per year tends to decrease over the years in a relatively uniform manner for each $\mu$. Thus, if for a ${\mu}_{0}$, segregation is stronger in the first $100$ years than for a ${\mu}_{1}$, it will also be stronger in the last $900$ years. It is therefore sufficient to focus only on the first $100$ years of the simulation, which also allows us to drastically reduce the execution time of our code. 
+However, we can see from the graphs below (number of moves as a function of the year for several $\mu$) that the first 100 years are already indicative of a high level of segregation or not. Indeed, the number of moves per year tends to decrease over the years in a relatively uniform manner for each $\mu$. Thus, if for a  ${\mu}_{0}$, segregation is stronger in the first 100 years than for a  ${\mu}_{1}$, it will also be stronger in the last 900 years. It is therefore sufficient to focus only on the first 100 years of the simulation, which also allows us to drastically reduce the execution time of our code. 
 
 <div align="center">
   <img src="images/graphmu0.2.png"><br>
@@ -133,15 +133,15 @@ However, we can see from the graphs below (number of moves as a function of the 
 #### Result
 
 
-So we decide to plot as a function of $\mu$, the total number of moves that took place during the first $100$ years of the simulation.
+So we decide to plot as a function of $\mu$, the total number of moves that took place during the first 100 years of the simulation.
 We estimate for each $\mu$, the total number of moves by an average over $10$ cities of their total number of moves. 
 
 <div align="center">
   <img src="images/graph.png"><br>
 </div>
 
-We clearly observe that for $\mu [0.63, 0.74]$ the number of moves reaches a *peak*, i.e. segregation is strongest for these values.
+We clearly observe that for $\mu \in [0.63, 0.74]$ the number of moves reaches a *peak*, i.e. segregation is strongest for these values.
 
-Below $0.63$, the tolerance threshold is too low, so households are rarely satisfied with their future housing: they rarely move and so segregation operates little. 
+Below 0.63, the tolerance threshold is too low, so households are rarely satisfied with their future housing: they rarely move and so segregation operates little. 
 
-Similarly, above $0.74$, the tolerance threshold is too high, so households are often satisfied with their current dwelling: they rarely seek to move and, likewise, segregation operates little. 
+Similarly, above 0.74, the tolerance threshold is too high, so households are often satisfied with their current dwelling: they rarely seek to move and, likewise, segregation operates little. 
