@@ -1,12 +1,12 @@
 # **Modéliser la ségrégation spatiale à l'aide du modèle de Schelling**
 
------------ Please find the English version in `README_en.md` -----------
+----------- Please find the English version in `README.md` -----------
 
 ENSAE ParisTech Printemps 2022
 
 Simon GENET • Marie-Olive THAURY
 
-Ce projet est réalisé dans le cadre du projet python de 1A. Il est supervisé par Xavier Dupré.
+*Ce projet est réalisé dans le cadre du **Projet Python** de 1A. Il est supervisé par Xavier Dupré.*
 
 ## Présentation du modèle de Schelling : 
 
