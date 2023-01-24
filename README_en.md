@@ -1,6 +1,6 @@
 # **Modeling spatial segregation using the Schelling model**
 
------------ Vous trouverez la version française dans ´README_fr.md´ -----------
+----------- Vous trouverez la version française dans `README_fr.md` -----------
 
 ENSAE ParisTech Spring 2022
 
@@ -85,7 +85,7 @@ We have made a function that returns the steady state. This steady state is the 
 
 #### Stability of the model
 
-We then test the stability of our model for different tolerance thresholds $\mu$, on $5$. This will allow us to know if it is enough to make our statistics on a single city or if we should make our statistics on an "average" of several cities. 
+We then test the stability of our model for different tolerance thresholds $\mu$, on 5 cities. This will allow us to know if it is enough to make our statistics on a single city or if we should make our statistics on an "average" of several cities. 
 
 <div align="center">
   <img src="images/mu0.4.png"><br>
@@ -107,7 +107,7 @@ For each tolerance level $\mu$ , we note that the standard deviation of the numb
 
 We observe that the standard deviation of the number of moves is larger for values of $\mu \in [0.6, 0.7]$, which can be explained by the fact that there are more moves and thus a greater dependence on the randomness of our model. 
 
-To be sure of the validity of our values, we will therefore average over $10$ cities to avoid extreme situations. 
+To be sure of the validity of our values, we will therefore average over 10$ cities to avoid extreme situations. 
 
 #### Number of years of the simulation
 
