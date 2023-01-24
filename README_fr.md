@@ -2,7 +2,7 @@
 
 ----------- Please find the English version in `README_en.md` -----------
 
-ENSAE ParisTech 2022-2023
+ENSAE ParisTech Printemps 2022
 
 Simon GENET • Marie-Olive THAURY
 
